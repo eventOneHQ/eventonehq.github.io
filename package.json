@@ -1,0 +1,8 @@
+{
+  "name": "NoahPrail.me",
+  "version": "2.0.0",
+  "description": "NoahPrail.me",
+  "engines": {
+    "node": "0.12.7"
+  }
+}
