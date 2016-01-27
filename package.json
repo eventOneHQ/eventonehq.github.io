@@ -1,8 +1,18 @@
 {
-  "name": "NoahPrail.me",
+  "name": "Filiosoft",
   "version": "2.0.0",
-  "description": "NoahPrail.me",
+  "description": "Filiosoft website!",
   "engines": {
     "node": "0.12.7"
+  },
+  "dependencies": {
+    "connect": "^3.4.1",
+    "finalhandler": "^0.4.1",
+    "serve-static": "^1.10.2"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.11.1",
+    "gulp": "^3.9.0",
+    "gulp-webserver": "^0.9.1"
   }
 }
