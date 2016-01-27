@@ -1,0 +1,26 @@
+{
+  "name": "Filiosoft",
+  "description": "Filiosoft website!",
+  "main": "",
+  "authors": [
+    "Noah Prail <Noah@Prail.net>"
+  ],
+  "license": "MIT",
+  "homepage": "http://Filiosoft.com",
+  "moduleType": [
+    "node"
+  ],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.6",
+    "Materialize": "materialize#^0.97.5"
+  }
+}
