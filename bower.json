@@ -20,6 +20,10 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap": "~3.3.6"
+    "angular": "^1.4.9",
+    "bootstrap": "^3.3.6",
+    "angular-bootstrap": "^1.1.1",
+    "ngAnimate": "*",
+    "angular-ui-router": "^0.2.17"
   }
 }
