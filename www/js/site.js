@@ -30,3 +30,5 @@ $(function() {
     }
   });
 });
+$.material.init()
+$.material.ripples()
