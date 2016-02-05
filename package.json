@@ -3,7 +3,7 @@
   "version": "2.0.0",
   "description": "Filiosoft website!",
   "engines": {
-    "node": "0.12.7"
+    "node": "0.12.6"
   },
   "dependencies": {
     "connect": "^3.4.1",
