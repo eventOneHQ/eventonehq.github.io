@@ -3,7 +3,7 @@
   "description": "Filiosoft website!",
   "main": "",
   "authors": [
-    "Noah Prail <Noah@Prail.net>"
+    "Noah Prail <Noah@Filiosoft.com>"
   ],
   "license": "MIT",
   "homepage": "http://Filiosoft.com",
@@ -21,6 +21,7 @@
   ],
   "dependencies": {
     "bootstrap": "~3.3.6",
+    "angular": "^1.5.0",
     "bootstrap-material-design": "^0.5.8"
   }
 }
