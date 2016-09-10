@@ -1,1 +1,18 @@
-# This is no longer active! Please use the GitLab repo. https://gitlab.filiosoft.com/filiosoft/Filiosoft.com
+## Current Open Source Projects
+
+***
+
+#### [Polr-Mobile](https://github.com/Filiosoft/polr-mobile)
+A mobile Polr client app built with Ionic.
+
+[![Build Status](https://travis-ci.org/Filiosoft/polr-mobile.svg?branch=master)](https://travis-ci.org/Filiosoft/polr-mobile)
+[![license](https://img.shields.io/github/license/Filiosoft/polr-mobile.svg?maxAge=2592000)](https://github.com/Filiosoft/polr-mobile)
+
+[Website](/polr-mobile) - [GitHub](https://github.com/Filiosoft/polr-mobile)
+
+***
+
+
+### Authors and Contributors
+* @nprail
+* @chigginbotham
