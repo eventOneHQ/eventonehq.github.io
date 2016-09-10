@@ -1,0 +1,6 @@
+{
+  "name": "Filiosoft Open Source",
+  "tagline": "Welcome to Filiosoft's Open Source Projects page!",
+  "body": "## Current Open Source Projects\r\n\r\n***\r\n\r\n#### [Polr-Mobile](https://github.com/Filiosoft/polr-mobile)\r\nA mobile Polr client app built with Ionic.\r\n\r\n[![Build Status](https://travis-ci.org/Filiosoft/polr-mobile.svg?branch=master)](https://travis-ci.org/Filiosoft/polr-mobile)\r\n[![license](https://img.shields.io/github/license/Filiosoft/polr-mobile.svg?maxAge=2592000)](https://github.com/Filiosoft/polr-mobile)\r\n\r\n[Website](/polr-mobile) - [GitHub](https://github.com/Filiosoft/polr-mobile)\r\n\r\n***\r\n\r\n\r\n### Authors and Contributors\r\n* @nprail\r\n* @chigginbotham",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
