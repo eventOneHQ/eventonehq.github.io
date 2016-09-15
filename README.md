@@ -4,13 +4,13 @@ Visit [Filiosoft.com](https://filiosoft.com) for more information about Filiosof
 
 ***
 
-#### [Polr-Mobile](https://github.com/Filiosoft/polr-mobile)
+#### [Polr-Mobile](https://gitlab.filiosoft.com/filiosoft-osp/polr-mobile)
 A mobile Polr client app built with Ionic.
 
-[![Build Status](https://travis-ci.org/Filiosoft/polr-mobile.svg?branch=master)](https://travis-ci.org/Filiosoft/polr-mobile)
-[![license](https://img.shields.io/github/license/Filiosoft/polr-mobile.svg?maxAge=2592000)](https://github.com/Filiosoft/polr-mobile)
+[![build status](https://gitlab.filiosoft.com/filiosoft-osp/polr-mobile/badges/master/build.svg)](https://gitlab.filiosoft.com/filiosoft-osp/polr-mobile/commits/master)
+[![license](https://img.shields.io/github/license/Filiosoft/polr-mobile.svg?maxAge=2592000)](https://gitlab.filiosoft.com/filiosoft-osp/polr-mobile/blob/master/LICENSE)
 
-[Website](/polr-mobile) - [GitHub](https://github.com/Filiosoft/polr-mobile)
+[Website](https://polr-mobile.filiosoft.net) - [GitLab](https://gitlab.filiosoft.com/filiosoft-osp/polr-mobile)
 
 ***
 
