@@ -216,7 +216,7 @@ a:focus {
   }
 }
 .hero-area {
-  background: url(../../img/hero-area.jpg) no-repeat;
+  background: url(../../dist/img/hero-area.jpg) no-repeat;
   background-size: cover;
   background-position: center bottom;
   color: #fff;

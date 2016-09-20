@@ -18,6 +18,8 @@ var newer = require('gulp-newer');
 var del = require('del');
 var filesRequired = require('gulp-files-required');
 var cleanCSS = require('gulp-clean-css');
+var changed = require('gulp-changed');
+var imagemin = require('gulp-imagemin');
 
 var paths = {
     coreJS: [
@@ -86,7 +88,7 @@ gulp.task('all', ['clean'], function () {
 });
 
 // Run all combine and minify tasks for css and js.
-gulp.task('build', ['css', 'js', 'fonts'], function () {
+gulp.task('build', ['css', 'js', 'fonts', 'images'], function () {
     console.info("Running CSS and JS tasks.")
 });
 
@@ -144,6 +146,16 @@ gulp.task('uglify-js', ['concat-js'], function (cb) {
     ],
         cb
     );
+});
+
+gulp.task('images', function() {
+   var imgSrc = 'img/*.*',
+   imgDst = 'dist/img';
+   
+   gulp.src(imgSrc)
+   .pipe(changed(imgDst))
+   .pipe(imagemin())
+   .pipe(gulp.dest(imgDst));
 });
 
 // Clean up the dist folder. 
