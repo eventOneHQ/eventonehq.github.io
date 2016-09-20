@@ -17,23 +17,38 @@ var copy = require('gulp-copy');
 var newer = require('gulp-newer');
 var del = require('del');
 var filesRequired = require('gulp-files-required');
+var cleanCSS = require('gulp-clean-css');
 
 var paths = {
     coreJS: [
         'js/app/*.js'
     ],
 
-    bowerJS: [
-        'lib/jquery/dist/jquery.js',
-        'lib/bootstrap/dist/js/bootstrap.js',
+    libJS: [
+        'js/bootstrap.js',
+        'js/ripples.js',
+        'js/material.js',
+        'js/wow.js',
+        'js/jquery.mmenu.min.all.js',
+        'js/count-to.js',
+        'js/jquery.inview.min.js',
+        'js/classie.js',
+        'js/jquery.nav.js',
+        'js/smooth-on-scroll.js',
+        'js/smooth-scroll.js',
+        'js/main.js'
     ],
 
     coreLess: [
         ''
     ],
 
-    bowerCSS: [
-        'lib/bootstrap/dist/css/bootstrap.css',
+    libCSS: [
+        'css/bootstrap.min.css',
+        'css/material.min.css',
+        'css/ripples.min.css',
+        'css/responsive.css',
+        'css/animate.css'
     ],
     outputFolders: [ //supports the cleaning
         'dist/css/*',
@@ -48,87 +63,92 @@ gulp.task('serve', function () {
     browserSync.init({
         server: "./"
     });
-
-    gulp.watch("css/*.css").on('change', browserSync.reload);
-    gulp.watch("*.html").on('change', browserSync.reload);
-    gulp.watch("js/*.js").on('change', browserSync.reload);
 });
 
 gulp.task('default', ['serve']);
 
-gulp.task('_watch', function () {
+gulp.task('watch', ['serve'], function () {
+    // Watch for changes in `app` folder
+    gulp.watch('dist/**/*.*').on('change', browserSync.reload);
 
-    gulp.watch(paths.coreJs, ['core:js']);
-    gulp.watch(paths.bowerJs, ['bower:js']);
+    // Watch .css files
+    gulp.watch('css/**/*.css', ['css']);
 
-    gulp.watch(paths.coreLess, ['core:less']);
-    gulp.watch(paths.bowerCSS, ['bower:css']);
+    // Watch .js files
+    gulp.watch('js/**/*.js', ['js']);
+
+    // Watch image files
+    gulp.watch('img/**/*', ['images']);
 });
 
-gulp.task("_build", ['core:js', 'core:less', 'bower:css', 'bower:js']);
-
-gulp.task("_rebuild", ['_clean', '_build']);
-
-gulp.task("_clean", function (cb) {
-    del.sync(paths.outputFolders);
-    cb();
+gulp.task('all', ['clean'], function () {
+    gulp.start('build');
 });
 
-gulp.task('core:js', function (cb) {
-    processJs(paths.coreJs, 'core.min.js', cb);
+// Run all combine and minify tasks for css and js.
+gulp.task('build', ['css', 'js', 'fonts'], function () {
+    console.info("Running CSS and JS tasks.")
 });
 
-gulp.task('bower:js', function (cb) {
-    processJs(paths.bowerJs, 'bower.min.js', cb);
+// Run all fonts tasks.
+gulp.task('fonts', function () {
+    return gulp.src([
+        'fonts/*'])
+        .pipe(gulp.dest('dist/fonts/'));
 });
 
-gulp.task('core:less', function (cb) {
-    processLess(paths.coreLess, 'core.min.css', cb);
+// Run all CSS tasks.
+gulp.task('css', ['minify-css', 'minify-custom-css'], function () {
+    console.info("Running CSS tasks.")
 });
 
-gulp.task("bower:css", function (cb) {
+// Concat CSS files.
+gulp.task('concat-css', function () {
+    return gulp.src(paths.libCSS)
+        .pipe(concat('lib.css'))
+        .pipe(gulp.dest('./dist/css/'));
+});
+
+// Minify CSS files. 
+gulp.task('minify-css', ['concat-css'], function () {
+    return gulp.src('dist/css/lib.css')
+        .pipe(cleanCSS({ compatibility: 'ie8' }))
+        .pipe(gulp.dest('./dist/css/'));
+});
+
+gulp.task('minify-custom-css', function () {
+    return gulp.src('css/app/main.css')
+        .pipe(cleanCSS({ compatibility: 'ie8' }))
+        .pipe(gulp.dest('./dist/css/'));
+});
+
+
+// Run all JS tasks.
+gulp.task('js', ['uglify-js'], function () {
+    console.info("Running JS tasks.")
+});
+
+// Concat JS files.
+gulp.task('concat-js', function () {
+    return gulp.src(paths.libJS)
+        .pipe(concat('lib.js'))
+        .pipe(gulp.dest('./dist/js/'));
+});
+
+// Uglify JS files.
+gulp.task('uglify-js', ['concat-js'], function (cb) {
     pump([
-        gulp.src(paths.bowerCss),
-        newer('dist/css'),
-        sourcemaps.init(),
-        cleancss({ target: 'dist/css/', relativeTo: 'dist/css/' }),
-        sourcemaps.write('../source-maps'),
-        debug({ title: 'bower:css' }),
-        gulp.dest('dist/css')
-    ], cb);
+        gulp.src('dist/js/lib.js'),
+        uglify(),
+        gulp.dest('./dist/js/')
+    ],
+        cb
+    );
 });
 
-function processJs(inputFiles, outputFile, cb) {
-
-    var options = {
-        //preserveComments: 'license'
-    };
-
-    pump([
-        gulp.src(inputFiles),
-        filesRequired(inputFiles.length, inputFiles.length),
-        newer('dist/js/' + outputFile),
-        sourcemaps.init(),
-        concat(outputFile),
-        uglify(options),
-        sourcemaps.write('../source-maps'),
-        debug({ title: outputFile }),
-        gulp.dest('dist/js')
-    ], cb);
-
-}
-
-function processLess(inputFiles, outputFile, cb) {
-    pump([
-       gulp.src(inputFiles),
-       filesRequired(inputFiles.length, inputFiles.length),
-       newer('dist/css/' + outputFile),
-       sourcemaps.init(),
-       less(),
-       cleancss({ target: 'dist/css/', relativeTo: 'dist/css/' }),
-       concat(outputFile),
-       sourcemaps.write('../source-maps'),
-       debug({ title: outputFile }),
-       gulp.dest('dist/css')
-    ], cb);
-}
+// Clean up the dist folder. 
+gulp.task('clean', function () {
+    return del([
+        'dist/',
+    ]);
+});
