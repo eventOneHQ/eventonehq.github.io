@@ -1,5 +1,7 @@
 mirror:
   stage: deploy
+  tags:
+    - docker
   script:
     - git clone --bare https://nprail:$GITLAB_ACCESS_KEY@gitlab.filiosoft.com/filiosoft-osp/filiosoft.net.git
     - cd filiosoft.net.git
