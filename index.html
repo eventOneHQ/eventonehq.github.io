@@ -1,133 +1,138 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" ng-app="app">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="description" content="Filiosoft's open source projects page.">
-  <meta name="keywords" content="Filiosoft">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="author" content="Filiosoft">
-  <title>Filiosoft Open Source</title>
+	<meta charset="utf-8">
+	<meta name="description" content="Filiosoft's open source projects page.">
+	<meta name="keywords" content="Filiosoft">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="author" content="Filiosoft">
+	<title>Filiosoft Open Source</title>
 
-  <link href="dist/css/lib.css" rel="stylesheet">
-  <link href="dist/fonts/font-awesome.min.css" rel="stylesheet">
-  <link href="dist/css/main.css" rel="stylesheet">
+	<link href="dist/css/lib.css" rel="stylesheet">
+	<link href="dist/fonts/font-awesome.min.css" rel="stylesheet">
+	<link href="dist/css/main.css" rel="stylesheet">
 </head>
 
-<body>
+<body ng-controller="AppCtrl">
 
-  <div class="navbar navbar-invers menu-wrap">
-    <div class="navbar-header text-center">
-      <a class="navbar-brand logo-right" href="javascript:void(0)">Filiosoft OSP</a>
-    </div>
-    <ul class="nav navbar-nav main-navigation">
-      <li class="active"><a href="#home">Home</a></li>
-      <li><a href="#features">OSP</a></li>
-      <li><a href="https://filiosoft.com">Filiosoft.com</a></li>
-      <li><a href="https://gitlab.filiosoft.com/filiosoft-osp">FS OSP GitLab</a></li>
-    </ul>
-    <button class="close-button" id="close-button">Close Menu</button>
-  </div>
+	<div class="navbar navbar-invers menu-wrap">
+		<div class="navbar-header text-center">
+			<a class="navbar-brand logo-right" href="javascript:void(0)">Filiosoft OSP</a>
+		</div>
+		<ul class="nav navbar-nav main-navigation">
+			<li class="active"><a href="#home">Home</a></li>
+			<li><a href="#features">OSP</a></li>
+			<li><a href="https://filiosoft.com">Filiosoft.com</a></li>
+			<li><a href="https://gitlab.filiosoft.com/filiosoft-osp">FS OSP GitLab</a></li>
+		</ul>
+		<button class="close-button" id="close-button">Close Menu</button>
+	</div>
 
-  <div class="content-wrap">
-    <header class="hero-area" id="home">
+	<div class="content-wrap">
+		<header class="hero-area" id="home">
 
-      <div class="container">
-        <div class="col-md-12">
+			<div class="container">
+				<div class="col-md-12">
 
-          <div class="navbar navbar-inverse sticky-navigation navbar-fixed-top" role="navigation" data-spy="affix" data-offset-top="200">
-            <div class="container">
-              <div class="navbar-header">
-                <a class="logo-left " href="index.html">Filiosoft OSP</a>
-              </div>
-              <div class="navbar-right">
-                <button class="menu-icon" id="open-button">
+					<div class="navbar navbar-inverse sticky-navigation navbar-fixed-top" role="navigation" data-spy="affix" data-offset-top="200">
+						<div class="container">
+							<div class="navbar-header">
+								<a class="logo-left " href="index.html">Filiosoft OSP</a>
+							</div>
+							<div class="navbar-right">
+								<button class="menu-icon" id="open-button">
                     <i class="mdi-navigation-menu"></i>
                   </button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="contents text-right">
-          <h1 class="wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="300ms">Filiosoft Open Source Projects</h1>
-          <p class="wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="400ms">Welcome to Filiosoft's Open Source Projects page!</p>
-          <a href="#features" class="btn btn-lg btn-border wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="500ms">Projects</a>
-        </div>
-    </header>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="contents text-right">
+					<h1 class="wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="300ms">Filiosoft Open Source Projects</h1>
+					<p class="wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="400ms">Welcome to Filiosoft's Open Source Projects page!</p>
+					<a href="#features" class="btn btn-lg btn-border wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="500ms">Projects</a>
+				</div>
+		</header>
 
-    <section id="features" class="section">
-      <div class="container">
-        <div class="section-header">
-          <h1 class="section-title wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="100ms">Current Open Source Projects</h1>
-        </div>
-        <div class="row">
+		<section id="features" class="section">
+			<div class="container">
+				<div class="section-header">
+					<h1 class="section-title wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="100ms">Current Open Source Projects</h1>
+				</div>
+				<div class="row">
 
-          <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
-            <div class="features">
-              <div class="features-text">
-                <h4>Polr-Mobile</h4>
-                <a href="https://gitlab.filiosoft.com/filiosoft-osp/polr-mobile/commits/master"><img alt="build status" src="https://gitlab.filiosoft.com/filiosoft-osp/polr-mobile/badges/master/build.svg" /></a>
-                <a href="https://gitlab.filiosoft.com/filiosoft-osp/polr-mobile/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg"></a>
-                <p>
-                  A mobile Polr client app built with Ionic.
-                </p>
-                <p><a href="https://polr-mobile.filiosoft.net">Website</a> - <a href="https://gitlab.filiosoft.com/filiosoft-osp/polr-mobile">GitLab</a> - <a href="https://github.com/Filiosoft/polr-mobile">GitHub</a></p>
-              </div>
-            </div>
-          </div>
+					<div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms" ng-repeat="repo in repos | orderBy:'-star_count' | limitTo: 20">
+						<div class="features">
+							<div class="features-text">
+								<h4>{{repo.name}}</h4>
+                <h5>{{repo.star_count}} Stars - {{repo.forks_count}} Forks</h5>
+								<p>
+                  {{repo.description}}
+								</p>
+								<p><a href="{{repo.web_url}}">GitLab Repository</a>
+							</div>
+						</div>
+					</div>
 
-        </div>
-      </div>
-    </section>
+				</div>
+			</div>
+		</section>
 
-    <section id="footer">
-      <div class="container">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-3 col-sm-6 col-xs-12">
-              <h3>Open Source Projects</h3>
-              <ul>
-                <li><a href="https://polr-mobile.filiosoft.net">Polr-Mobile</a>
-                </li>
-              </ul>
-            </div>
-            <div class="col-md-3 col-sm-6 col-xs-12">
-              <h3>Find us on</h3>
-              <a class="social" href="https://www.facebook.com/Filiosoft/" target="_blank"><i class="fa fa-facebook"></i></a>
-              <a class="social" href="https://twitter.com/filiosoft" target="_blank"><i class="fa fa-twitter"></i></a>
-              <a class="social" href="https://plus.google.com/+Filiosoft" target="_blank"><i class="fa fa-google-plus"></i></a>
-              <a class="social" href="https://github.com/filiosoft" target="_blank"><i class="fa fa-github"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Go to Top Link -->
-      <a href="#home" class="btn btn-primary back-to-top">
-        <i class=" mdi-hardware-keyboard-arrow-up"></i>
-      </a>
-    </section>
+		<section id="footer">
+			<div class="container">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-3 col-sm-6 col-xs-12">
+							<h3>Top Open Source Projects</h3>
+							<ul ng-repeat="repo in repos | orderBy:'-star_count' | limitTo: 3">
+								<li><a href="{{repo.web_url}}">{{repo.name}}</a>
+								</li>
+							</ul>
+						</div>
+						<div class="col-md-3 col-sm-6 col-xs-12">
+							<h3>Find us on</h3>
+							<a class="social" href="https://www.facebook.com/Filiosoft/" target="_blank"><i class="fa fa-facebook"></i></a>
+							<a class="social" href="https://twitter.com/filiosoft" target="_blank"><i class="fa fa-twitter"></i></a>
+							<a class="social" href="https://plus.google.com/+Filiosoft" target="_blank"><i class="fa fa-google-plus"></i></a>
+							<a class="social" href="https://github.com/filiosoft" target="_blank"><i class="fa fa-github"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Go to Top Link -->
+			<a href="#home" class="btn btn-primary back-to-top">
+				<i class=" mdi-hardware-keyboard-arrow-up"></i>
+			</a>
+		</section>
 
-    <section id="copyright">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <p class="copyright-text">
-              © Filiosoft 2016 All right reserved. Designed and Developed by
-              <a href="https://filiosoft.com/">
+		<section id="copyright">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<p class="copyright-text">
+							© Filiosoft 2016 All right reserved. Designed and Developed by
+							<a href="https://filiosoft.com/">
                 Filiosoft
               </a>
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-    </div>
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		</div>
 
 
-    <script src="js/jquery-2.1.4.min.js"></script>
-    <script src="dist/js/lib.js"></script>
+		<script src="js/jquery-2.1.4.min.js"></script>
+		<script src="dist/js/lib.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
 
-    <script>
+    <!-- Angular App JS-->
+		<script src="js/app/app.js"></script>
+		<script src="js/app/controllers.js"></script>
+		<script src="js/app/services.js"></script>
+
+		<script>
         $(document).ready(function() {
             // This command is used to initialize some elements and make them work properly
             $.material.init();
