@@ -12,7 +12,7 @@ pages:
     - docker
   script:
   - mkdir public
-  - cp -r * public
+  - cp -r !(public) public
   artifacts:
     paths:
     - public
