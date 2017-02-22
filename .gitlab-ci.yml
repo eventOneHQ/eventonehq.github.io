@@ -12,7 +12,7 @@ pages:
     - docker
   script:
   - mkdir public
-  - cp -r !(public) public
+  - rsync -r --exclude=.git,public * public
   artifacts:
     paths:
     - public
