@@ -14,6 +14,8 @@ pages:
   script:
   - mkdir public
   - rsync -r --exclude=public * public
+  - ls
+  - ls public/
   artifacts:
     paths:
     - public
