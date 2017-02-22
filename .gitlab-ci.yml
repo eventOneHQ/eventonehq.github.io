@@ -19,7 +19,7 @@ pages:
   - npm install -qq
   script:
   - gulp all
-  - rm node_modules/
+  - rm -r node_modules/
   - mkdir .public
   - cp -r * .public
   - mv .public public
