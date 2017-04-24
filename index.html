@@ -21,8 +21,9 @@
 		<ul class="nav navbar-nav main-navigation">
 			<li class="active"><a href="#home">Home</a></li>
 			<li><a href="#features">OSS</a></li>
-			<li><a href="https://filiosoft.com">Filiosoft.com</a></li>
-			<li><a href="https://gitlab.filiosoft.com/oss">FS OSS GitLab</a></li>
+			<li><a href="https://filiosoft.com" target="_blank">Filiosoft.com</a></li>
+			<li><a href="https://gitlab.filiosoft.com/oss" target="_blank">FS OSS GitLab</a></li>
+			<li><a href="https://github.com/Filiosoft" target="_blank">Filiosoft on GitHub</a></li>
 		</ul>
 		<button class="close-button" id="close-button">Close Menu</button>
 	</div>
@@ -47,23 +48,33 @@
 					<h1 class="wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="300ms">Filiosoft Open Source Software</h1>
 					<p class="wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="400ms">Welcome to Filiosoft's Open Source Software page!</p>
 					<a href="#features" class="btn btn-lg btn-border wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="500ms">Projects</a>
+					<a href="https://github.com/Filiosoft" target="_blank" class="btn btn-lg btn-border wow fadeInUp" data-wow-duration="1000ms"
+					    data-wow-delay="500ms">GitHub</a>
 				</div>
 		</header>
 		<section id="features" class="section">
 			<div class="container">
 				<div class="section-header">
 					<h1 class="section-title wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="100ms">Current Open Source Software</h1>
+					<div ng-if="error">{{error}}</div>
 				</div>
 				<div class="row">
-					<div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms" ng-repeat="repo in repos | orderBy:'-star_count' | limitTo: 20">
+					<div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms" ng-repeat="project in oss | orderBy:'-stars' | limitTo: 20"
+					    ng-show="complete">
 						<div class="features">
 							<div class="features-text">
-								<h4>{{repo.name}}</h4>
-								<h5>{{repo.star_count}} Stars - {{repo.forks_count}} Forks</h5>
+								<h4>{{project.doc.name}}
+									<small ng-if="project.doc.fork">Forked from <a href="{{project.doc.forkUrl}}">{{project.doc.forkName}}</a></small></h4>
+								<h5>{{project.stars}} Stars - {{project.forks}} Forks</h5>
 								<p>
-									{{repo.description}}
+									{{project.doc.description}}
 								</p>
-								<p><a href="{{repo.web_url}}">GitLab Repository</a>
+								<p>
+									<a href="https://gitlab.filiosoft.com/oss/{{project.doc.gitlabName}}" target="_blank" ng-if="project.doc.gitlabName">GitLab Repository</a>
+								</p>
+								<p>
+									<a href="https://github.com/Filiosoft/{{project.doc.githubName}}" target="_blank" ng-if="project.doc.githubName">GitHub Repository</a>
+								</p>
 							</div>
 						</div>
 					</div>
@@ -76,8 +87,10 @@
 					<div class="row">
 						<div class="col-md-3 col-sm-6 col-xs-12">
 							<h3>Top Open Source Software</h3>
-							<ul ng-repeat="repo in repos | orderBy:'-star_count' | limitTo: 3">
-								<li><a href="{{repo.web_url}}">{{repo.name}}</a>
+							<ul ng-repeat="project in oss | orderBy:'-stars' | limitTo: 3">
+								<li>
+									<a ng-if="project.doc.githubName" href="https://github.com/Filiosoft/{{project.doc.githubName}}">{{project.doc.name}}</a>
+									<a ng-if="!project.doc.githubName" href="https://gitlab.filiosoft.com/oss/{{project.doc.gitlabName}}">{{project.doc.name}}</a>
 								</li>
 							</ul>
 						</div>
@@ -112,6 +125,7 @@
 		<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 		<script src="dist/js/lib.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+		<script src="//cdn.jsdelivr.net/pouchdb/6.2.0/pouchdb.min.js"></script>
 		<!-- Angular App JS-->
 		<script src="js/app/app.js"></script>
 		<script src="js/app/controllers.js"></script>
