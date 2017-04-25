@@ -49,8 +49,8 @@ angular.module('app.services', [])
                                 defer.reject(err);
                             });
                         }
-                        if (value.doc.gitlabId && !value.doc.githubName) {
-                            gitlabApi.get('projects/' + value.doc.gitlabId).then(function (res) {
+                        if (value.doc.gitlabName && !value.doc.githubName) {
+                            gitlabApi.get('projects/oss%2F' + value.doc.gitlabName).then(function (res) {
                                 result.rows[key].stars = res.data.star_count;
                                 result.rows[key].forks = res.data.forks_count;
                                 defer.resolve('Done');
