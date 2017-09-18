@@ -34,7 +34,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@gitlab.filiosoft.com:filiosoft-oss/filiosoft.net.git"
+    "url": "git@git.filiosoft.com:oss/oss.filiosoft.net.git"
   },
   "author": "Filiosoft",
   "license": "MIT"

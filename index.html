@@ -22,7 +22,7 @@
 			<li class="active"><a href="#home">Home</a></li>
 			<li><a href="#features">Projects</a></li>
 			<li><a href="https://github.com/Filiosoft" target="_blank">Filiosoft on GitHub</a></li>
-			<li><a href="https://gitlab.filiosoft.com/oss" target="_blank">FS OSS GitLab</a></li>
+			<li><a href="https://developers.filiosoft.com/oss" target="_blank">FS OSS GitLab</a></li>
 			<li><a href="https://filiosoft.com" target="_blank">Filiosoft.com</a></li>
 		</ul>
 		<button class="close-button" id="close-button">Close Menu</button>
@@ -70,7 +70,7 @@
 									{{project.doc.description}}
 								</p>
 								<p>
-									<a href="https://gitlab.filiosoft.com/oss/{{project.doc.gitlabName}}" target="_blank" ng-if="project.doc.gitlabName">GitLab Repository</a>
+									<a href="https://developers.filiosoft.com/oss/{{project.doc.gitlabName}}" target="_blank" ng-if="project.doc.gitlabName">GitLab Repository</a>
 								</p>
 								<p>
 									<a href="https://github.com/Filiosoft/{{project.doc.githubName}}" target="_blank" ng-if="project.doc.githubName">GitHub Repository</a>
@@ -90,7 +90,7 @@
 							<ul ng-repeat="project in oss | orderBy:'-stars' | limitTo: 3">
 								<li>
 									<a ng-if="project.doc.githubName" href="https://github.com/Filiosoft/{{project.doc.githubName}}" target="_blank">{{project.doc.name}}</a>
-									<a ng-if="!project.doc.githubName" href="https://gitlab.filiosoft.com/oss/{{project.doc.gitlabName}}" target="_blank">{{project.doc.name}}</a>
+									<a ng-if="!project.doc.githubName" href="https://developers.filiosoft.com/oss/{{project.doc.gitlabName}}" target="_blank">{{project.doc.name}}</a>
 								</li>
 							</ul>
 						</div>

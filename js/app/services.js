@@ -3,7 +3,7 @@ angular.module('app.services', [])
         var fsBotToken = 'LH1qV_6tjA6xM4TrcKCm';
         return {
             get: function (api) {
-                return $http.get('https://gitlab.filiosoft.com/api/v4/' + api + '?private_token=' + fsBotToken)
+                return $http.get('https://developers.filiosoft.com/api/v4/' + api + '?private_token=' + fsBotToken)
                     .success(function (data) {
                         return data;
                     })
