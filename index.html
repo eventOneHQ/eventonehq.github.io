@@ -22,7 +22,6 @@
 			<li class="active"><a href="#home">Home</a></li>
 			<li><a href="#features">Projects</a></li>
 			<li><a href="https://github.com/Filiosoft" target="_blank">Filiosoft on GitHub</a></li>
-			<li><a href="https://developers.filiosoft.com/oss" target="_blank">FS OSS GitLab</a></li>
 			<li><a href="https://filiosoft.com" target="_blank">Filiosoft.com</a></li>
 		</ul>
 		<button class="close-button" id="close-button">Close Menu</button>
@@ -59,8 +58,10 @@
 					<div ng-if="error">{{error}}</div>
 				</div>
 				<div class="row">
-					<div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms" ng-repeat="project in oss | orderBy:'-stars' | limitTo: 20"
-					    ng-show="complete">
+					<div ng-repeat="project in oss | orderBy:'-stars' | limitTo: 20"
+					ng-show="complete">
+					<div class="clearfix" ng-if="$index % 3 == 0"></div>
+					<div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
 						<div class="features">
 							<div class="features-text">
 								<h4>{{project.doc.name}}
@@ -70,14 +71,11 @@
 									{{project.doc.description}}
 								</p>
 								<p>
-									<a href="https://developers.filiosoft.com/oss/{{project.doc.gitlabName}}" target="_blank" ng-if="project.doc.gitlabName">GitLab Repository</a>
-								</p>
-								<p>
 									<a href="https://github.com/Filiosoft/{{project.doc.githubName}}" target="_blank" ng-if="project.doc.githubName">GitHub Repository</a>
 								</p>
 							</div>
 						</div>
-					</div>
+					</div></div>
 				</div>
 			</div>
 		</section>
@@ -90,7 +88,6 @@
 							<ul ng-repeat="project in oss | orderBy:'-stars' | limitTo: 3">
 								<li>
 									<a ng-if="project.doc.githubName" href="https://github.com/Filiosoft/{{project.doc.githubName}}" target="_blank">{{project.doc.name}}</a>
-									<a ng-if="!project.doc.githubName" href="https://developers.filiosoft.com/oss/{{project.doc.gitlabName}}" target="_blank">{{project.doc.name}}</a>
 								</li>
 							</ul>
 						</div>
@@ -114,8 +111,8 @@
 				<div class="row">
 					<div class="col-md-12">
 						<p class="copyright-text">
-							&copy; 2017 Filiosoft, LLC. All right reserved. Designed and Developed by
-							<a href="https://filiosoft.com/">Filiosoft, LLC</a>
+							&copy; 2017 Filiosoft, LLC. Designed and Developed by
+							<a href="https://filiosoft.com/">Filiosoft, LLC</a>. This site is <a href="https://github.com/Filiosoft/filiosoft.github.io">open source</a> under the <a href="https://github.com/Filiosoft/filiosoft.github.io/blob/master/LICENSE">MIT License</a>! 
 						</p>
 					</div>
 				</div>

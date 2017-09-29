@@ -1,19 +1,4 @@
 angular.module('app.services', [])
-    .service('gitlabApi', function ($http) {
-        var fsBotToken = 'LH1qV_6tjA6xM4TrcKCm';
-        return {
-            get: function (api) {
-                return $http.get('https://developers.filiosoft.com/api/v4/' + api + '?private_token=' + fsBotToken)
-                    .success(function (data) {
-                        return data;
-                    })
-                    .error(function (err) {
-                        console.error(err);
-                        return err;
-                    });
-            }
-        };
-    })
     .service('githubApi', function ($http) {
         return {
             get: function (api) {
@@ -28,7 +13,7 @@ angular.module('app.services', [])
             }
         };
     })
-    .service('db', function ($q, gitlabApi, githubApi) {
+    .service('db', function ($q, githubApi) {
         var dbAddress = 'https://db.filiosoft.com/'
         var db = new PouchDB(dbAddress + 'fs-oss');
 
@@ -43,15 +28,6 @@ angular.module('app.services', [])
                         if (value.doc.githubName) {
                             githubApi.get('/repos/Filiosoft/' + value.doc.githubName).then(function (res) {
                                 result.rows[key].stars = res.data.stargazers_count;
-                                result.rows[key].forks = res.data.forks_count;
-                                defer.resolve('Done');
-                            }).catch(function (err) {
-                                defer.reject(err);
-                            });
-                        }
-                        if (value.doc.gitlabName && !value.doc.githubName) {
-                            gitlabApi.get('projects/oss%2F' + value.doc.gitlabName).then(function (res) {
-                                result.rows[key].stars = res.data.star_count;
                                 result.rows[key].forks = res.data.forks_count;
                                 defer.resolve('Done');
                             }).catch(function (err) {
