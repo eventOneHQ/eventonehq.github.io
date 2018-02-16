@@ -6,8 +6,8 @@
 	<meta name="description" content="Filiosoft's Open Source Software page.">
 	<meta name="keywords" content="Filiosoft">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<meta name="author" content="Filiosoft">
-	<title>Filiosoft Open Source Software</title>
+	<meta name="author" content="Filiosoft, LLC">
+	<title>Filiosoft Open Source</title>
 	<link href="dist/css/lib.css" rel="stylesheet">
 	<link href="dist/fonts/font-awesome.min.css" rel="stylesheet">
 	<link href="dist/css/main.css" rel="stylesheet">
@@ -16,7 +16,7 @@
 <body ng-controller="AppCtrl">
 	<div class="navbar navbar-invers menu-wrap">
 		<div class="navbar-header text-center">
-			<a class="navbar-brand logo-right" href="javascript:void(0)">Filiosoft OSS</a>
+			<a class="navbar-brand logo-right" href="javascript:void(0)">Filiosoft Open Source</a>
 		</div>
 		<ul class="nav navbar-nav main-navigation">
 			<li class="active"><a href="#home">Home</a></li>
@@ -33,7 +33,7 @@
 					<div class="navbar navbar-inverse sticky-navigation navbar-fixed-top" role="navigation" data-spy="affix" data-offset-top="200">
 						<div class="container">
 							<div class="navbar-header">
-								<a class="logo-left " href="index.html">Filiosoft OSS</a>
+								<a class="logo-left " href="/">Filiosoft Open Source</a>
 							</div>
 							<div class="navbar-right">
 								<button class="menu-icon" id="open-button">
@@ -44,7 +44,7 @@
 					</div>
 				</div>
 				<div class="contents text-right">
-					<h1 class="wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="300ms">Filiosoft Open Source Software</h1>
+					<h1 class="wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="300ms">Filiosoft Open Source</h1>
 					<p class="wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="400ms">Welcome to Filiosoft's Open Source Software page!</p>
 					<a href="#features" class="btn btn-lg btn-border wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="500ms">Projects</a>
 					<a href="https://github.com/Filiosoft" target="_blank" class="btn btn-lg btn-border wow fadeInUp" data-wow-duration="1000ms"
@@ -64,14 +64,14 @@
 					<div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
 						<div class="features">
 							<div class="features-text">
-								<h4>{{project.doc.name}}
-									<small ng-if="project.doc.fork">Forked from <a href="{{project.doc.forkUrl}}">{{project.doc.forkName}}</a></small></h4>
+								<h4>{{project.name}}
+									<small ng-if="project.fork">Fork</small></h4>
 								<h5>{{project.stars}} Stars - {{project.forks}} Forks</h5>
 								<p>
-									{{project.doc.description}}
+									{{project.description}}
 								</p>
 								<p>
-									<a href="https://github.com/Filiosoft/{{project.doc.githubName}}" target="_blank" ng-if="project.doc.githubName">GitHub Repository</a>
+									<a ng-href="{{project.url}}" target="_blank">GitHub Repository</a>
 								</p>
 							</div>
 						</div>
@@ -87,7 +87,7 @@
 							<h3>Top Open Source Software</h3>
 							<ul ng-repeat="project in oss | orderBy:'-stars' | limitTo: 3">
 								<li>
-									<a ng-if="project.doc.githubName" href="https://github.com/Filiosoft/{{project.doc.githubName}}" target="_blank">{{project.doc.name}}</a>
+									<a ng-href="{{project.url}}" target="_blank">{{project.name}}</a>
 								</li>
 							</ul>
 						</div>
@@ -95,8 +95,9 @@
 							<h3>Find us on</h3>
 							<a class="social" href="https://www.facebook.com/Filiosoft/" target="_blank"><i class="fa fa-facebook"></i></a>
 							<a class="social" href="https://twitter.com/filiosoft" target="_blank"><i class="fa fa-twitter"></i></a>
-							<a class="social" href="https://plus.google.com/+Filiosoft" target="_blank"><i class="fa fa-google-plus"></i></a>
 							<a class="social" href="https://github.com/filiosoft" target="_blank"><i class="fa fa-github"></i></a>
+							<a class="social" href="https://medium.com/filiosoft" target="_blank"><i class="fa fa-medium"></i></a>
+							<a class="social" href="https://plus.google.com/+Filiosoft" target="_blank"><i class="fa fa-google-plus"></i></a>
 						</div>
 					</div>
 				</div>
@@ -111,7 +112,7 @@
 				<div class="row">
 					<div class="col-md-12">
 						<p class="copyright-text">
-							&copy; 2017 Filiosoft, LLC. Designed and Developed by
+							&copy; {{year}} Filiosoft, LLC. Designed and Developed by
 							<a href="https://filiosoft.com/">Filiosoft, LLC</a>. This site is <a href="https://github.com/Filiosoft/filiosoft.github.io">open source</a> under the <a href="https://github.com/Filiosoft/filiosoft.github.io/blob/master/LICENSE">MIT License</a>! 
 						</p>
 					</div>
@@ -122,11 +123,8 @@
 		<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 		<script src="dist/js/lib.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
-		<script src="//cdn.jsdelivr.net/pouchdb/6.2.0/pouchdb.min.js"></script>
 		<!-- Angular App JS-->
 		<script src="js/app/app.js"></script>
-		<script src="js/app/controllers.js"></script>
-		<script src="js/app/services.js"></script>
 		<script>
 			$(document).ready(function () {
 				// This command is used to initialize some elements and make them work properly

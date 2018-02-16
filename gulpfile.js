@@ -61,8 +61,12 @@ var paths = {
 
 // Static Server
 gulp.task('serve', function () {
-
+    const port = 4000;
     browserSync.init({
+        port: port,
+        ui: {
+            port: port + 1
+        },
         server: "./"
     });
 });

@@ -2,5 +2,5 @@
 Visit [Filiosoft.com](https://filiosoft.com) for more information about Filiosoft.
 
 ### Authors and Contributors
-* @nprail
-* @chigginbotham
+* [@nprail](https://github.com/nprail)
+* [@chigginbotham](https://github.com/chigginbotham)

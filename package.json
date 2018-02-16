@@ -32,10 +32,7 @@
     "lodash": "4.15.0",
     "pump": "1.0.1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:filiosoft/filiosoft.github.io.git"
-  },
-  "author": "Filiosoft, LLC <opensource@filiosoft.com>",
+  "repository": "filiosoft/filiosoft.github.io",
+  "author": "Filiosoft Open Source <opensource@filiosoft.com>",
   "license": "MIT"
 }
