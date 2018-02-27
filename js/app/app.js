@@ -3,7 +3,7 @@ angular.module('app', [])
         $scope.year = new Date().getFullYear();
         $scope.complete = false;
 
-        $http.get('https://filiosoft-oss.now.sh/')
+        $http.get('https://oss-repos.filiosoft.com/')
             .then(function (res) {
                 $scope.oss = res.data;
                 $scope.complete = true;

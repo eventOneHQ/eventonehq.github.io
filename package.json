@@ -6,7 +6,7 @@
   "scripts": {
     "start": "gulp",
     "gulp": "gulp",
-    "development": "gulp"
+    "dev": "gulp watch"
   },
   "dependencies": {},
   "devDependencies": {
