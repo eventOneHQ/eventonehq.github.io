@@ -2,6 +2,7 @@
   "name": "filiosoft-oss",
   "version": "1.0.0",
   "description": "Filiosoft Open Source Software Website",
+  "homepage": "https://filiosoft.org",
   "main": "",
   "scripts": {
     "start": "gulp",
