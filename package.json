@@ -1,6 +1,7 @@
 {
   "name": "filiosoft-labs",
   "version": "1.0.0",
+  "homepage": "https://filiosoft.org",
   "description": "Filiosoft Labs Website",
   "scripts": {
     "start": "gulp",
