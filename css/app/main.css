@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:700,400,100);
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   color: #666;
   font-size: 14px;
   font-weight: 400;
@@ -38,7 +38,7 @@ a:hover,
 a:focus {
   text-decoration: none;
   outline: none;
-  color: #00B7A4;
+  color: #00b7a4;
 }
 .section {
   padding: 90px 0;
@@ -83,7 +83,7 @@ a:focus {
   animation-fill-mode: both;
   -webkit-animation-name: fadeInDown;
   animation-name: fadeInDown;
-  padding: 0!important;
+  padding: 0 !important;
   background: #3f51b5 !important;
 }
 .sticky-navigation .row {
@@ -118,7 +118,7 @@ a:focus {
   float: none;
 }
 .navbar .navbar-nav li a {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   display: block;
   font-size: 14px;
   padding: 15px 20px;
@@ -176,7 +176,7 @@ a:focus {
 }
 .close-button::before,
 .close-button::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 3px;
   height: 100%;
@@ -366,7 +366,7 @@ a:focus {
   padding-bottom: 40px;
 }
 #services .box-item .icon {
-  background: #3F51B5;
+  background: #3f51b5;
   text-align: center;
   margin-top: 12px;
   -webkit-transition: background 0.2s, color 0.2s;
@@ -396,7 +396,7 @@ a:focus {
   line-height: 18px;
 }
 #services .box-item:hover .icon {
-  background: #3F51B5;
+  background: #3f51b5;
 }
 #services .box-item:hover .icon i {
   color: #ffffff;
@@ -778,16 +778,16 @@ a:focus {
   color: #fff;
 }
 .social .fa-facebook:hover {
-  background: #3B5998;
+  background: #3b5998;
 }
 .social .fa-twitter:hover {
-  background: #00ACED;
+  background: #00aced;
 }
 .social .fa-google-plus:hover {
-  background: #DD4B39;
+  background: #dd4b39;
 }
 .social .fa-linkedin:hover {
-  background: #007BB6;
+  background: #007bb6;
 }
 #loader {
   position: fixed;

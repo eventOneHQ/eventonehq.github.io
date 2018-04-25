@@ -3,11 +3,11 @@
 
 <head>
 	<meta charset="utf-8">
-	<meta name="description" content="Filiosoft's Open Source Software page.">
+	<meta name="description" content="Filiosoft's Open Source Software Project">
 	<meta name="keywords" content="Filiosoft">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<meta name="author" content="Filiosoft, LLC">
-	<title>Filiosoft Open Source</title>
+	<title>Filiosoft Labs</title>
 	<link href="dist/css/lib.css" rel="stylesheet">
 	<link href="dist/fonts/font-awesome.min.css" rel="stylesheet">
 	<link href="dist/css/main.css" rel="stylesheet">
@@ -16,13 +16,21 @@
 <body ng-controller="AppCtrl">
 	<div class="navbar navbar-invers menu-wrap">
 		<div class="navbar-header text-center">
-			<a class="navbar-brand logo-right" href="javascript:void(0)">Filiosoft Open Source</a>
+			<a class="navbar-brand logo-right" href="javascript:void(0)">Filiosoft Labs</a>
 		</div>
 		<ul class="nav navbar-nav main-navigation">
-			<li class="active"><a href="#home">Home</a></li>
-			<li><a href="#features">Projects</a></li>
-			<li><a href="https://github.com/Filiosoft" target="_blank">Filiosoft on GitHub</a></li>
-			<li><a href="https://filiosoft.com" target="_blank">Filiosoft.com</a></li>
+			<li class="active">
+				<a href="#home">Home</a>
+			</li>
+			<li>
+				<a href="#features">Projects</a>
+			</li>
+			<li>
+				<a href="https://github.com/Filiosoft" target="_blank">Filiosoft on GitHub</a>
+			</li>
+			<li>
+				<a href="https://filiosoft.com" target="_blank">Filiosoft.com</a>
+			</li>
 		</ul>
 		<button class="close-button" id="close-button">Close Menu</button>
 	</div>
@@ -33,49 +41,50 @@
 					<div class="navbar navbar-inverse sticky-navigation navbar-fixed-top" role="navigation" data-spy="affix" data-offset-top="200">
 						<div class="container">
 							<div class="navbar-header">
-								<a class="logo-left " href="/">Filiosoft Open Source</a>
+								<a class="logo-left " href="/">Filiosoft Labs</a>
 							</div>
 							<div class="navbar-right">
 								<button class="menu-icon" id="open-button">
-                    <i class="mdi-navigation-menu"></i>
-                  </button>
+									<i class="mdi-navigation-menu"></i>
+								</button>
 							</div>
 						</div>
 					</div>
 				</div>
 				<div class="contents text-right">
-					<h1 class="wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="300ms">Filiosoft Open Source</h1>
-					<p class="wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="400ms">Welcome to Filiosoft's Open Source Software page!</p>
+					<h1 class="wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="300ms">Filiosoft Labs</h1>
+					<p class="wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="400ms">Welcome to Filiosoft's Open Source Software project!</p>
 					<a href="#features" class="btn btn-lg btn-border wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="500ms">Projects</a>
 					<a href="https://github.com/Filiosoft" target="_blank" class="btn btn-lg btn-border wow fadeInUp" data-wow-duration="1000ms"
-					    data-wow-delay="500ms">GitHub</a>
+					 data-wow-delay="500ms">GitHub</a>
 				</div>
 		</header>
 		<section id="features" class="section">
 			<div class="container">
 				<div class="section-header">
-					<h1 class="section-title wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="100ms">Current Open Source Software</h1>
+					<h1 class="section-title wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="100ms">Current Filiosoft Labs Projects</h1>
 					<div ng-if="error">{{error}}</div>
 				</div>
 				<div class="row">
-					<div ng-repeat="project in oss | orderBy:'-stars' | limitTo: 20"
-					ng-show="complete">
-					<div class="clearfix" ng-if="$index % 3 == 0"></div>
-					<div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
-						<div class="features">
-							<div class="features-text">
-								<h4>{{project.name}}
-									<small ng-if="project.fork">Fork</small></h4>
-								<h5>{{project.stars}} Stars - {{project.forks}} Forks</h5>
-								<p>
-									{{project.description}}
-								</p>
-								<p>
-									<a ng-href="{{project.url}}" target="_blank">GitHub Repository</a>
-								</p>
+					<div ng-repeat="project in oss | orderBy:'-stars' | limitTo: 20" ng-show="complete">
+						<div class="clearfix" ng-if="$index % 3 == 0"></div>
+						<div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
+							<div class="features">
+								<div class="features-text">
+									<h4>{{project.name}}
+										<small ng-if="project.fork">Fork</small>
+									</h4>
+									<h5>{{project.stars}} Stars - {{project.forks}} Forks</h5>
+									<p>
+										{{project.description}}
+									</p>
+									<p>
+										<a ng-href="{{project.url}}" target="_blank">GitHub Repository</a>
+									</p>
+								</div>
 							</div>
 						</div>
-					</div></div>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -93,11 +102,21 @@
 						</div>
 						<div class="col-md-3 col-sm-6 col-xs-12">
 							<h3>Find us on</h3>
-							<a class="social" href="https://www.facebook.com/Filiosoft/" target="_blank"><i class="fa fa-facebook"></i></a>
-							<a class="social" href="https://twitter.com/filiosoft" target="_blank"><i class="fa fa-twitter"></i></a>
-							<a class="social" href="https://github.com/filiosoft" target="_blank"><i class="fa fa-github"></i></a>
-							<a class="social" href="https://medium.com/filiosoft" target="_blank"><i class="fa fa-medium"></i></a>
-							<a class="social" href="https://plus.google.com/+Filiosoft" target="_blank"><i class="fa fa-google-plus"></i></a>
+							<a class="social" href="https://www.facebook.com/Filiosoft/" target="_blank">
+								<i class="fa fa-facebook"></i>
+							</a>
+							<a class="social" href="https://twitter.com/filiosoft" target="_blank">
+								<i class="fa fa-twitter"></i>
+							</a>
+							<a class="social" href="https://github.com/filiosoft" target="_blank">
+								<i class="fa fa-github"></i>
+							</a>
+							<a class="social" href="https://medium.com/filiosoft" target="_blank">
+								<i class="fa fa-medium"></i>
+							</a>
+							<a class="social" href="https://plus.google.com/+Filiosoft" target="_blank">
+								<i class="fa fa-google-plus"></i>
+							</a>
 						</div>
 					</div>
 				</div>
@@ -113,7 +132,9 @@
 					<div class="col-md-12">
 						<p class="copyright-text">
 							&copy; {{year}} Filiosoft, LLC. Designed and Developed by
-							<a href="https://filiosoft.com/">Filiosoft, LLC</a>. This site is <a href="https://github.com/Filiosoft/filiosoft.github.io">open source</a> under the <a href="https://github.com/Filiosoft/filiosoft.github.io/blob/master/LICENSE">MIT License</a>! 
+							<a href="https://filiosoft.com/">Filiosoft, LLC</a>. This site is
+							<a href="https://github.com/Filiosoft/filiosoft.github.io">open source</a> under the
+							<a href="https://github.com/Filiosoft/filiosoft.github.io/blob/master/LICENSE">MIT License</a>!
 						</p>
 					</div>
 				</div>
