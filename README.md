@@ -1,6 +1,6 @@
 # Filiosoft Labs Website
 
-Visit [Filiosoft.com](https://filiosoft.com) for more information about Filiosoft.
+Filiosoft Labs is Filiosoft's open source initiative! Visit [Filiosoft.com](https://filiosoft.com) for more information about Filiosoft.
 
 ### Authors and Contributors
 
