@@ -1,8 +1,8 @@
-# Filiosoft Labs Website
+# eventOne Labs Website
 
-_Deprecated in favor of [filiosoft.com/oss](https://filiosoft.com/oss)._
+_Deprecated in favor of [event1.io/open-source](event1.io/open-source)._
 
-Filiosoft Labs is Filiosoft's open source initiative! Visit [Filiosoft.com](https://filiosoft.com) for more information about Filiosoft.
+eventOne Labs is eventOne's open source initiative! Visit [event1.io](https://event1.io) for more information about eventOne.
 
 ### Authors and Contributors
 

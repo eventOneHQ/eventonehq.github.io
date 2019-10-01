@@ -1,8 +1,8 @@
 {
-  "name": "filiosoft-labs",
+  "name": "eventone-labs",
   "version": "1.0.0",
-  "homepage": "https://filiosoft.org",
-  "description": "Filiosoft Labs Website",
+  "homepage": "https://event1.io/open-source",
+  "description": "eventOne Labs Website",
   "scripts": {
     "start": "gulp",
     "dev": "gulp watch"
@@ -26,7 +26,7 @@
     "gulp-uglify": "2.0.0",
     "pump": "1.0.1"
   },
-  "repository": "filiosoft/filiosoft.github.io",
-  "author": "Filiosoft Labs <opensource@filiosoft.com>",
+  "repository": "eventOneHQ/eventonehq.github.io",
+  "author": "eventOne Labs <opensource@event1.io>",
   "license": "MIT"
 }
