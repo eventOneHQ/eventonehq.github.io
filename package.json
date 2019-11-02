@@ -9,7 +9,7 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "bower": "1.7.9",
+    "bower": "1.8.8",
     "browser-sync": "^2.11.1",
     "del": "2.2.2",
     "eslint": "^4.19.1",
